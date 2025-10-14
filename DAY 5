@@ -1,0 +1,156 @@
+ASSIGNMENT 26:
+#include<stdio.h>
+int main() {
+    //making a simple calculator using switch case
+    char operator;
+    double first, second, result;
+    printf("Enter an operator (+, -, *, /): ");
+    scanf("%c", &operator);
+    printf("Enter two operands: ");
+    scanf("%lf %lf", &first, &second);
+    switch (operator) {
+        case '+':
+            result = first + second;
+            printf("%.2lf + %.2lf = %.2lf\n", first, second, result);
+            break;
+        case '-':
+            result = first - second;
+            printf("%.2lf - %.2lf = %.2lf\n", first, second, result);
+            break;
+        case '*':
+            result = first * second;
+            printf("%.2lf * %.2lf = %.2lf\n", first, second, result);
+            break;
+        case '/':
+            if (second != 0) {
+                result = first / second;
+                printf("%.2lf / %.2lf = %.2lf\n", first, second, result);
+            } else {
+                printf("Error: Division by zero is not allowed.\n");
+            }
+            break;
+        default:
+            printf("Error: Invalid operator.\n");
+    }
+-----------------------------------------------------------------------------
+ASSIGNMENT 27:
+#include<stdio.h>
+int main()
+//program to check it is vowel orconsonant
+{
+    char ch;
+    printf("enter an alphabet: ");
+    scanf("%c",&ch);
+    switch(ch)
+    {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+        case 'A':
+        case 'E':
+        case 'I':
+        case 'O':
+        case 'U':
+            printf("%c is a vowel",ch);
+            break;
+        default:
+            printf("%c is a consonant",ch);
+    }
+}
+-----------------------------------------------------------------------------
+ASSIGNMENT 28:
+#include<stdio.h>
+int main()
+//program get gross salary using if else
+{
+    float basic, hra, da,ta, gross;
+    printf("Enter your basic salary: ");
+    scanf("%f", &basic);
+    if (basic > 15000) {
+        hra = 0.20 * basic;
+        da = 0.05 * basic;
+        ta = 0.10 * basic;
+        gross = basic + hra + da + ta;
+        printf("Your gross salary is: %.2f\n", gross);
+    } else if (basic <= 15000) {
+        da = 0.05 * basic;
+        ta = 0.10 * basic;
+        gross = basic + da + ta;
+        printf("Your gross salary is: %.2f\n", gross);
+    } else {
+        printf("Invalid salary entered.\n");
+    }
+    return 0;
+}
+----------------------------------------------------------
+ASSIGNMENT 29:
+#include<stdio.h>
+int main()
+//program to get the electricity bill by units using switch case
+{
+    float bill;
+    float units;
+    printf("Enter the number of units consumed: ");
+    scanf("%f", &units);
+    switch(units <=100 ? 1 : units <=200 ? 2 : units <=1000 ? 3 : 4)
+    {
+        case 1:
+            bill = units * 5;
+            printf("Your electricity bill is: %.2f\n", bill);
+            break;
+        case 2:
+            bill = units * 7;
+            printf("Your electricity bill is: %.2f\n", bill);
+            break;
+        case 3:
+            bill = units * 10;
+            printf("Your electricity bill is: %.2f\n", bill);
+            break;
+         default:
+            printf("Invalid input\n");
+            break;
+    }
+    return 0;
+}
+---------------------------------------------------------------
+ASSIGNMENT 30:
+#include<stdio.h>   
+int main()
+//program to check grade of a student using switch case
+{
+    int marks;
+    const char* grade;
+    // Get user input for marks
+    printf("enter your marks: ");
+    scanf("%d", &marks);
+    if (marks < 0 || marks > 100) {
+        printf("Invalid marks entered.\n");
+        return 1;
+    }
+    switch (marks / 10)
+    //here we are using marks/10 to get the tens place of the marks
+    {
+        case 10:
+        case 9:
+            if (marks >= 95)
+                grade = "A+";
+            else
+                grade = "A";
+            break;
+        case 8:
+            grade = "B";
+            break;
+        case 7:
+            grade = "C";
+            break;
+        default:
+            grade = "F";
+            break;
+    }
+    printf("your grade is: %s", grade);
+    return 0;
+}
+---------------------------------------------------------------
+-------------------------
