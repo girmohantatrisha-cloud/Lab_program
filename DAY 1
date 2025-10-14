@@ -1,0 +1,90 @@
+ASSIGNMENT 1: WRITE A C PROGRAM TO PRINT ADAMAS UNIVERSITY.
+SOURCE CODE:
+#include<stdio.h>
+int main(){
+    printf("ADAMAS UNIVERSITY");
+}
+OUTPUT:
+ADAMAS UNIVERSITY
+---------------------------------------------------------
+ASSIGNMENT 2: WRITE A C PROGRAM TO ADD TWO FLOAT NUMBERS.
+SOURCE CODE:
+#include<stdio.h>
+int main(){
+    float x,y,sum;
+    printf("Enter first number: "); 
+    scanf("%f",&x);
+    printf("Enter second number: "); 
+    scanf("%f",&y);
+    sum=x+y;
+    printf("SUM = %.2f\n",sum);
+}
+OUTPUT:
+Enter first number: 5.25
+Enter second number: 3.75
+SUM = 9.00
+--------------------------------------------------------
+ASSIGNMENT 3: WRITE A C PROGRAM TO SUBTRACT TWO NUMBERS TAKEN FROM USER.
+SOURCE CODE:
+#include<stdio.h>
+int main(){
+    int x,y,sub;
+    printf("Enter first number: "); 
+    scanf("%d",&x);
+    printf("Enter second number: "); 
+    scanf("%d",&y);
+    sub=x-y;
+    printf("DIFFERENCE = %.2f\n",sub);
+}
+OUTPUT:
+Enter first number: 5
+Enter second number: 3
+DIFFERENCE = 2
+---------------------------------------------------------
+ASSIGNMENT 4: WRITE A C PROGRAN TO PRINT MULTIPLICATION TABLE OF ANY NUMBER WITHOUT USING LOOP.
+SOURCE CODE:
+#include<stdio.com>
+int main(){
+    int n;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    printf("%d x 1 = %d\n",n,n*1);
+    printf("%d x 2 = %d\n",n,n*2);
+    printf("%d x 3 = %d\n",n,n*3);
+    printf("%d x 4 = %d\n",n,n*4);
+    printf("%d x 5 = %d\n",n,n*5);
+    printf("%d x 6 = %d\n",n,n*6); 
+    printf("%d x 7 = %d\n",n,n*7);
+    printf("%d x 8 = %d\n",n,n*8);
+    printf("%d x 9 = %d\n",n,n*9); 
+    printf("%d x 10 = %d\n",n,n*10);
+}
+OUTPUT:
+3 x 1 = 3
+3 x 2 = 6
+3 x 3 = 9
+3 x 4 = 12
+3 x 5 = 15
+3 x 6 = 18
+3 x 7 = 21
+3 x 8 = 24
+3 x 9 = 27
+3 x 10 = 30
+---------------------------------------------------------
+ASSIGNMENT 5: WRITE A C PROGRAM TO FIND OUT THE ASCII VALUE OF A CHARACTER TAKEN FROM THE USER.
+SOURCE CODE:
+#include<stdio.h>
+int main(){
+    char c;
+    printf("Enter user input: ");
+    scanf("%c",&c);
+    int ascii_val=c;
+    printf("Charcter = 5c\n",c);
+    printf("The ASCII value = %d",c,ascii_val);
+}
+OUTPUT:
+Enter user input: a
+Character = a
+The ASCII valuem = 97
+---------------------------------------------------------
+------------------------------------
