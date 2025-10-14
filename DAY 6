@@ -1,0 +1,74 @@
+ASSIGNMENT 31: WRITE A C PROGRAM TO FIND THE SUM OF N NATURAL NUMBERS.
+SOURCE CODE:
+#include<stdio.h>
+int main(){
+int n,sum=0;
+    printf("%d",&n);
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++)
+       sum+=sum+i;
+       printf("Sum of N natural numbers:%d",sum);
+}
+------------------------------------------------------------------------
+ASSIGNMENT 32: WRITE A C PROGRAM TO PRINT THE MULTIPLICATION TABLE OF ANY NUMBER USING FOR LOOP. 
+SOURCE CODE:
+#include<stdio.h>
+int main(){
+    int n,p=1;
+    printf("Enter value of n: ");
+    scanf("%d",&n);
+    for(int i=0;i<=10;i++){
+       p=n*i;
+       printf("%dx%d=%d\n",n,i,p);
+     }
+}
+------------------------------------------------------------------------
+ASSIGNMENT 33: WRITE A C PROGRAM TO PRINT THE FACTORIAL OF A NUMBER USING FOR LOOP.
+SOURCE CODE:
+#include<stdio.h>
+int main(){
+    int n,f=1;
+    printf("Enter value of n: ");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++)
+    f*=i;
+    printf("Factorial of %d is %d",n,f);
+}
+------------------------------------------------------------------------
+ASSIGNMENT 34: WRITE A C PROGRAM TO PRINT FIBONACCI SERIES UPTO N TERMS. 
+SOURCE CODE:
+#include<stdio.h>
+int main(){
+    int n,a,b=1,c=0;
+    printf("Enter any number upto which you want to print fibonacci series\n");
+    scanf("%d",&n);
+    for(int i=0;i<=n;i++){
+    printf("%d",c);
+    a=b;
+    b=c;
+    c=a+b;
+}
+------------------------------------------------------------------------
+ASSIGNMENT 35: WRITE A C PROGRAM TO PRINT ALL THE PRIME NUMBERS BETWEEN A CERTAIN RANGE. TAKE THE RANGE FROM THE THE USEER.
+SOURCE CODE:
+#include<stdio.h>
+int main(){
+    int l,h;
+    printf("l= ");
+    scanf("%d",&l);
+    printf("h= ");
+    scanf("%d",&h);
+    printf("Prime numbers are:\n");
+          for(int i=l;i<=h;i++){
+             int c=0;
+             for(int j=1;j<=i;j++){
+                if(i%j==0)
+                c++;
+             }
+                if(c==2)
+                printf("%d",i);
+           }
+    printf("\n");
+}
+------------------------------------------------------------------------
+--------------------
