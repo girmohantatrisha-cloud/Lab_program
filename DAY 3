@@ -1,0 +1,84 @@
+ASSIGNMENT 11: WRITE A C PROGRAM TO FIND THE LAST DIGIT OF AN INTEGER a)USING MODULUS b)WITHOUT USING MODULUS.
+SOURCE CODE:
+#include<stdio.h>
+  int main(){
+      int n,d1,d2;
+      printf("Enter a number: ");
+      scanf("%d",&n);
+      d1=n%10;
+      printf("Using modulus\n");
+      printf("Last digit: %d\n",d1);
+      d2=n-(n/10)*10;
+      printf("Without using modulus\n");
+      printf("Last digit: %d",d2);
+}
+
+-------------------------------------------------------------------------------------------------------------  
+ASSIGNMENT 12: WRITE A C PROGRAM TO CALCULATE THE COMPOUND INTEREST.
+SOURCE CODE:
+#include<stdio.h>
+  int main(){
+      float a; int p,r,n,t;
+      printf("Enter principal value: ");
+      scanf("%d",&p);
+      printf("Enter rate of interest: ");
+      scanf("%d",&r);
+       printf("Enter the no. of times interest is compounded per year: ");
+      scanf("%d",&n);
+      printf("Enter time taken: ");
+      scanf("%d",&t);
+      a=p*(1+(r/n)^n*t);
+      printf("Amount=%.2f\n",a);
+}
+-------------------------------------------------------------------------------------------------------------
+ASSIGNMENT 13: WRITE A C PROGRAM TO FIND OUT THE AREA AND PERIMETER OF A RECTANGLE.
+SOURCE CODE:
+#include<stdio.h>
+  int main(){
+      int l,w,a,p;
+      printf("Length: ");
+      scanf("%d",&l);
+      printf("Width: ");
+      scanf("%d",&w);
+      a=l*w;
+      printf("Area of rectangle: %d",a);
+      p=2*(l+w);
+      printf("Perimeter of rectangle: %d",p);
+}
+-------------------------------------------------------------------------------------------------------------
+ASSIGNMENT 14: WRITE A C PROGRAM TO FIND OUT THE FLOOR AND CEIL VALUE OF A +VE AND -VE VALUE.
+SOURCE CODE: 
+#include<stdio.h>
+#include<math.h>  
+  int main(){
+      float n1,n2;
+      int a1,a2;
+      printf("Enter a positive float value: ");
+      sacnf("%f",&n1);
+      a1=floor(n1);
+      a2=ceil(n1);
+      printf("Floor value: %d\n",a1);
+      printf("Ceil value: %d\n",a2);
+      printf("Enter a negative float value: ");
+      sacnf("%f",&n2);
+      a1=floor(n2);
+      a2=ceil(n2);
+      printf("Floor value: %d\n",a1);
+      printf("Ceil value: %d\n",a2);
+}
+-------------------------------------------------------------------------------------------------------------
+ASSIGNMENT 15: WRITE A C PROGRAM TO FIND OUT THE ROOT OF A QUADRATIC EQUATION.
+SOURCE CODE:
+#include<stdio.h>
+#include<stdio.h>
+  int main(){
+      int a,b,c;
+      printf("Enter the coefficient of quad. ax^2+bx+c: ");
+      scanf("%d,%d,%d",&a,&b,&c);
+      float root1,root2;
+      root1=(-b+sqrt((pow(b,2)-4*a*c)))/2*a;
+      root2=(-b-sqrt((pow(b,2)-4*a*c)))/2*a;
+      printf("The roots are %f and %f", root1,root2);
+}
+-------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------
