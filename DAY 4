@@ -1,0 +1,148 @@
+ASSIGNMENT 16: WRITE A C PROGRAM TO CHECK WHETHER ROLL NO. 100 IS PRESENT OR NOT.
+#include<stdio.h>
+int main(){
+int r;
+printf("Enter roll number: ");
+scanf("%d",&r);
+if(r==100)
+printf("Roll no. 100 is present");
+else
+printf("Roll no. 100 is absent");
+}
+-------------------------------------------------------------------------------------------------
+ASSIGNMENT 17: WRITE A C PROGRAM TO CHECK WHETHER A INTEGER IS ODD OR NOT.
+#include<stdio.h>
+int main(){
+int i;
+printf("Enter a integer: ");
+scanf("%d",&i);
+if(i%2==0)
+printf("It is an even integer");
+else
+printf("It is an odd integer");
+}
+-------------------------------------------------------------------------------------------------
+ASSIGNMENT 18: WRITE A C PROGRAM TO CHECK THE GREATEST AMONG TWO NUMBERS.
+#include<stdio.h>
+int main(){
+int n1,n2;
+printf("Enter first integer: ");
+scanf("%d",&n1);
+printf("Enter second integer: ");
+scanf("%d",&n2);
+if(n1>n2)
+printf("%d is greater than %d",n1,n2);
+else
+printf("%d is greater than %d",n2,n1);
+}
+-------------------------------------------------------------------------------------------------
+ASSIGNMENT 19: WRITE A C PROGRAM TO CHECK WHETHER IT IS HEAD OR TAIL.
+#include<stdio.h>
+int main(){
+char c;
+printf("Enter toss value");
+scanf("%c",&c);
+if(c=='H'||c=='h')
+printf("It is a head");
+if(c=='T'||c=='t')
+printf("It is a tail");
+}
+-------------------------------------------------------------------------------------------------
+ASSIGNMENT 20: WRITE A C PROGRAM TO CHECK WHETHER A NUMBER IS WHOLE NUMBER OR NOT.
+#include<stdio.h>
+int main(){
+int n;
+printf("Enter a number: ");
+scanf("%d",&n);
+if(n>=0)
+printf("It is a whole number");
+else
+printf("It is not a whole number");
+}
+-------------------------------------------------------------------------------------------------
+ASSIGNMENT 21: WRITE A C PROGRAM TO CHECK WHETHER IT IS LEAP YEAR OR NOT USING LADDER IF-ELSE.
+#include<stdio.h>
+int main(){
+int y;
+printf("Enter a year: ");
+scanf("%d",&y);
+if(y%400==0)
+printf("Leap year");
+else if(y%100==0)
+printf("Not a Leap year");
+else if(y%4==0)
+printf("Leap year");
+else
+printf("Not a Leap year");
+}
+-------------------------------------------------------------------------------------------------
+ASSIGNMENT 22: WRITE A C PROGRAM TO CHECK MAXIMUM AMONG THREE NUMBERS USING LADDER IF-ELSE.
+#include<stdio.h>
+int main(){
+int a,b,c;
+printf("Enter first number: ");
+scanf("%d",&a);
+printf("Enter second number: ");
+scanf("%d",&b);
+printf("Enter third number: ");
+scanf("%d",&c);
+if(a>b&&a>c)
+printf("%d is the greatest number",a);
+else if(b>a&&b>c)
+printf("%d is the greatest number",b);
+else
+printf("%d is the greatest number",c);
+}
+}
+-------------------------------------------------------------------------------------------------
+ASSIGNMENT 23: WRITE A C PROGRAM TO CHECK IF A LETTER IS VOWEL OR CONSONANT USING LADDER IF-ELSE.
+#include<stdio.h>
+int main(){
+char l;
+printf("Enter a letter");
+scanf("%d",&l);
+if(l=='a'||l=='e'||l=='i'||l=='o'||l=='u'||l=='A'||l=='E'||l=='I'||l=='O'||l=='U')
+printf("Letter is vowel");
+else
+printf("Letter is consonant");
+}
+-------------------------------------------------------------------------------------------------
+ASSIGNMENT 24: WRITE A C PROGRAM TO FIND THE SIZE OF INTEGER, FLOAT, DOUBLE,CHAR.
+#include<stdio.h>
+int main(){
+int intType;
+float floatType;
+double doubleType;
+char charType;
+printf("size of int: %zu bytes\n",sizeof(intType));
+printf("size of float: %zu bytes\n",sizeof(floatType));
+printf("size of double: %zu bytes\n",sizeof(doubleType));
+printf("size of char: %zu bytes\n",sizeof(charType));
+return 0;
+}
+-------------------------------------------------------------------------------------------------
+ASSIGNMENT 25: WRITE A C PROGRAM TO CHECK MAXIMUM AMONG THREE NUMBERS USING NESTED IF-ELSE.
+#include<stdio.h>
+int main(){
+int a,b,c;
+printf("Enter first number: ");
+scanf("%d",&a);
+printf("Enter second number: ");
+scanf("%d",&b);
+printf("Enter third number: ");
+scanf("%d",&c);
+if(a>b){
+if(a>c)
+printf("%d is the greatest number",a);
+else
+printf("%d is the greatest number",c);
+}
+if(b>a){
+if(b>c)
+printf("%d is the greatest number",b);
+else
+printf("%d is the greatest number",c);
+}
+}
+-------------------------------------------------------------------------------------------------
+--------------------
