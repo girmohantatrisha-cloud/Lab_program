@@ -1,0 +1,97 @@
+ASSIGNMENT 6: WRITE A C PROGRAM TO FIND OUT SIMPLE INTEREST.
+SOURCE CODE:
+#include<stdio>
+int main(){
+    float SI,p,t,r;
+    printf("Enter principal amount: ");
+    scanf("%f"&p);
+    printf("Enter time taken: ");
+    scanf("%f"&t);
+    printf("Enter rate of interest: ");
+    scanf("%f"&r);
+    SI=(p*t*r)/100;
+    printf("SI=%0.2f",SI);
+}
+OUTPUT:
+Enter principal amount: 5000
+Enter time taken: 2
+Enter rate of interest:10
+SI=1000.00
+-------------------------------------------------------------
+
+ASSIGNMENT 7: WRITE A C PROGRAM TO CALCULATE AREA OF A CIRCLE.
+SOURCE CODE:
+#include<stdio>
+int main(){
+    float a,r;
+    printf("Enter radius: ");
+    scanf("%f",&r);
+    a=3.14*r*r;
+    printf("Area of the circle: %0.2f",a);
+}
+OUTPUT:
+Enter radius: 4
+Area of the circle: 50.24
+-------------------------------------------------------------
+
+ASSIGNMENT 8: WRITE A C PROGRAM TO CONVERT FAHRENHEIT TO CELCIUS AND VICE VERSA.
+SOURCE CODE:
+#include<stdio>
+int main(){
+    float F,C;
+    printf("Enter a value in Fahrenheit: ");
+    scanf("%f",&F);
+    C=(F-32)*5/9;
+    printf("Celcius = %0.2f",C);
+    printf("Enter a value in Celcius: ");
+    scanf("%f",&C);
+    F=(C*9/5)+32;
+    printf("Fahrenheit = %0.2f",F);
+}
+OUTPUT:
+Enter a value in Fahrenheit: 36  
+Celcius = 2.22
+Enter a value in Celcius: 85 
+Fahrenheit = 185.00
+-------------------------------------------------------------
+
+ASSIGNMENT 9: WRITE A C PROGRAM TO SWAP TWO NUMBERS USING A THIRD VARIABLE.
+SOURCE CODE:
+#include<stdio>
+int main(){
+    int a,b,c;
+    printf("a=");
+    scanf("%d",&a);
+    printf("b=");
+    scanf("%d",&b);
+    c=a;
+    a=b;
+    b=c;
+    printf("After swapping: a=%d, b=%d",a,b);
+}
+OUTPUT:
+a=5
+b=10
+After swapping: a=10, b=5
+-------------------------------------------------------------
+
+ASSIGNMENT 10: WRITE A C PROGRAM TO SWAP TWO NUMBERS WITHOUT USING A THIRD VARIABLE.
+SOURCE CODE:
+#include<stdio>
+int main(){
+    int a,b;
+    printf("a=");
+    scanf("%d",&a);
+    printf("b=");
+    scanf("%d",&b);
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    printf("After swapping: a=%d, b=%d",a,b);
+}
+OUTPUT:
+a=5
+b=10
+After swapping: a=10, b=5
+-------------------------------------------------------------
+--------------------------
