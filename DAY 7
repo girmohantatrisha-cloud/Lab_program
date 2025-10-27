@@ -1,0 +1,114 @@
+ASSIGNMENT 36: Write a C program to find the sum of the digits of a number using a while loop
+#include<stdio.h>
+int main(){
+	int n; int sum=0;
+	printf("Enter a number: ");
+	scanf("%d",&n);
+	while(n>0){
+		int d=n%10;
+		sum=sum+d;
+		n/=10;
+	}
+	printf("Sum of digits of n: %d",sum);
+}
+
+ASSIGNMENT 37: Write a C program to find the reverse of a number using a while loop
+#include<stdio.h>
+int main(){
+	int n; int rev=0;
+	printf("Enter a number: ");
+	scanf("%d",&n);
+	while(n>0){
+		int d=n%10;
+		rev=rev*10+d;
+		n/=10;
+	}
+	printf("Reverse of the number: %d",rev);
+}
+
+ASSIGNMENT 38: Write a C program to check whether the given number is a palindrome or not
+#include<stdio.h>
+int main(){
+	int n; int rev=0;
+	printf("Enter a number: ");
+	scanf("%d",&n);
+	int p=n;
+	while(p>0){
+		int d=p%10;
+		rev=rev*10+d;
+		p/=10;
+	}
+	if(rev==n)
+	printf("It is a palindrome number");
+	else
+	printf("It is not a palindrome number");
+}
+
+ASSIGNMENT 39: Write a C program to print the following pattern
+               4321      
+               432     
+               43       
+               4                
+  #include<stdio.h>
+  int main(){
+  	for(int i=1;i<=4;i++){
+  		for(int j=4;j>=i;j--){
+  			printf("%d",j);
+		  }
+		  printf("\n");
+	  }
+  }
+ASSIGNMENT 40:Write a C program to print the following pattern   
+     1 2 3     
+     8 9 4    
+     7 6 5  
+#include<stdio.h>
+  int main(){
+  	int i,j;
+  	int arr[3][3] = {
+	  {1, 2, 3},
+	  {8, 9, 5},
+	  {7, 6, 5}
+  };
+  for(i=0;i<3;i++){
+  	for(i=0;i<3;j++){
+  		printf("%d",arr[i][j]);
+  }
+  printf("\n");
+}
+return 0;
+}
+
+ASSIGNMENT 41: Write a C program to print the following pattern
+         *
+        * *
+       * * *
+        * *
+         *
+
+#include <stdio.h>
+int main() {
+    int n = 3;  // number of rows in upper half
+
+    // Upper half of pattern
+    for (int i = 1; i <= n; i++) {
+        for (int j = i; j < n; j++)
+            printf(" ");           // spaces before stars
+
+        for (int j = 1; j <= i; j++)
+            printf("* ");          // print stars with space
+        printf("\n");
+    }
+
+    // Lower half of pattern
+    for (int i = n - 1; i >= 1; i--) {
+        for (int j = n; j > i; j--)
+            printf(" ");           // spaces before stars
+
+        for (int j = 1; j <= i; j++)
+            printf("* ");          // print stars with space
+        printf("\n");
+    }
+
+    return 0;
+}
