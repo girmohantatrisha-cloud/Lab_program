@@ -1,0 +1,341 @@
+ASSIGNMENT 1: To print "ADAMAS UNIVERSITY"
+ALGORITHM:
+STEP 1: Start
+STEP 2: Print "ADAMAS UNIVERSITY"
+STEP 3: End
+
+ASSIGNMENT 2:  To find the sum of two numbers
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input first number x
+STEP 3: Input second number y
+STEP 4: Calculate the sum as sum = x + y
+STEP 5: Print "SUM = (sum)"
+STEP 6: End
+
+ASSIGNMENT 3: To find the difference between two numbers
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input first number x
+STEP 3: Input second number y
+STEP 4: Calculate the difference as sub = x - y
+STEP 5: Print "DIFFERENCE = (sub)"
+STEP 6: End
+
+ASSIGNMENT 4: To print the multiplication table of a given number
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input a number n
+STEP 3: Multiply the number n by 1, 2, 3, …, 10
+STEP 4: Print the results in the form “n x i = result” for each value of i
+STEP 5: End
+
+ASSIGNMENT 5:  To find the ASCII value of a character
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input a character c
+STEP 3: Find the ASCII value of c
+STEP 4: Print the character and its ASCII value
+STEP 5: End
+
+ASSIGNMENT 6: To find Simple Interest (SI)
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input the principal amount p
+STEP 3: Input the time t
+STEP 4: Input the rate of interest r
+STEP 5: Calculate simple interest using the formula SI = (p * t * r) / 100
+STEP 6: Print "SI = (value)"
+STEP 7: End
+
+ASSIGNMENT 7: To find the area of a circle
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input the radius r of the circle
+STEP 3: Calculate the area using the formula a = 3.14 * r * r
+STEP 4: Print "Area of the circle = (a)"
+STEP 5: End
+
+ASSIGNMENT 8: To convert temperature between Fahrenheit and Celsius
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input temperature in Fahrenheit F
+STEP 3: Calculate Celsius using C = (F - 32) * 5 / 9
+STEP 4: Print "Celsius = (C)"
+STEP 5: Input temperature in Celsius C
+STEP 6: Calculate Fahrenheit using F = (C * 9 / 5) + 32
+STEP 7: Print "Fahrenheit = (F)"
+STEP 8: End
+
+ASSIGNMENT 9: To swap two numbers using a third variable
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input two numbers a and b
+STEP 3: Store the value of a in c
+STEP 4: Assign the value of b to a
+STEP 5: Assign the value of c to b
+STEP 6: Print the swapped values of a and b
+STEP 7: End
+
+ASSIGNMENT 10: To swap two numbers without using a third variable
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input two numbers a and b
+STEP 3: Add both numbers and store the result in a → a = a + b
+STEP 4: Subtract b from the new value of a and assign to b → b = a - b
+STEP 5: Subtract the new value of b from a and assign to a → a = a - b
+STEP 6: Print the swapped values of a and b
+STEP 7: End
+
+ASSIGNMENT 11: Find the last digit of an integer
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input an integer n
+STEP 3: Find the last digit using modulus → d1 = n % 10
+STEP 4: Print "Last digit using modulus = d1"
+STEP 5: Find the last digit without using modulus → d2 = n - (n/10)*10
+STEP 6: Print "Last digit without modulus = d2"
+STEP 7: End
+
+ASSIGNMENT 12: Calculate Compound Interest
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input principal p
+STEP 3: Input rate of interest r
+STEP 4: Input number of times interest is compounded per year n
+STEP 5: Input time t
+STEP 6: Calculate compound amount → a = p * (1 + r/n)^(n*t)
+STEP 7: Print "Amount = a"
+STEP 8: End
+
+ASSIGNMENT 13: Area and Perimeter of a Rectangle
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input length l
+STEP 3: Input width w
+STEP 4: Calculate area → a = l * w
+STEP 5: Print "Area of rectangle = a"
+STEP 6: Calculate perimeter → p = 2 * (l + w)
+STEP 7: Print "Perimeter of rectangle = p"
+STEP 8: End
+
+ASSIGNMENT 14: Floor and Ceil values of positive and negative numbers
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input a positive float n1
+STEP 3: Find floor → a1 = floor(n1)
+STEP 4: Find ceil → a2 = ceil(n1)
+STEP 5: Print floor and ceil values of n1
+STEP 6: Input a negative float n2
+STEP 7: Find floor → a1 = floor(n2)
+STEP 8: Find ceil → a2 = ceil(n2)
+STEP 9: Print floor and ceil values of n2
+STEP 10: End
+
+ASSIGNMENT 15: Find the roots of a quadratic equation
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input coefficients a, b, c of the quadratic equation ax^2 + bx + c
+STEP 3: Calculate D=b^2 – 4ac
+STEP 4: If D<0 , print “Imaginary roots” else
+STEP 5: Calculate first root → root1 = (-b + sqrt(b^2 - 4*a*c)) / (2*a)
+STEP 6: Calculate second root → root2 = (-b - sqrt(b^2 - 4*a*c)) / (2*a)
+STEP 7: Print "The roots are root1 and root2"
+STEP 8: End
+
+ASSIGNMENT 16: Check whether roll no. 100 is present
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input roll number r
+STEP 3: If r == 100, print "Roll no. 100 is present"
+STEP 4: Else, print "Roll no. 100 is absent"
+STEP 5: End
+
+ASSIGNMENT 17: Check whether an integer is odd or even
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input an integer i
+STEP 3: If i % 2 == 0, print "It is an even integer"
+STEP 4: Else, print "It is an odd integer"
+STEP 5: End
+
+ASSIGNMENT 18: Check the greatest among two numbers
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input two integers n1 and n2
+STEP 3: If n1 > n2, print "n1 is greater than n2"
+STEP 4: Else, print "n2 is greater than n1"
+STEP 5: End
+
+ASSIGNMENT 19: Check whether it is head or tail
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input toss value c
+STEP 3: If c == 'H' or c == 'h', print "It is a head"
+STEP 4: If c == 'T' or c == 't', print "It is a tail"
+STEP 5: End
+
+ASSIGNMENT 20: Check whether a number is whole
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input number n
+STEP 3: If n >= 0, print "It is a whole number"
+STEP 4: Else, print "It is not a whole number"
+STEP 5: End
+
+ASSIGNMENT 21: Check leap year using ladder if-else
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input year y
+STEP 3: If y % 400 == 0, print "Leap year"
+STEP 4: Else if y % 100 == 0, print "Not a Leap year"
+STEP 5: Else if y % 4 == 0, print "Leap year"
+STEP 6: Else, print "Not a Leap year"
+STEP 7: End
+
+ASSIGNMENT 22: Maximum among three numbers using ladder if-else
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input three numbers a, b, c
+STEP 3: If a > b and a > c, print "a is the greatest number"
+STEP 4: Else if b > a and b > c, print "b is the greatest number"
+STEP 5: Else, print "c is the greatest number"
+STEP 6: End
+
+ASSIGNMENT 23: Check if a letter is vowel or consonant
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input a letter l
+STEP 3: If l is 'a','e','i','o','u' (or uppercase), print "Letter is vowel"
+STEP 4: Else, print "Letter is consonant"
+STEP 5: End
+
+ASSIGNMENT 24: Find the size of int, float, double, char
+ALGORITHM:
+STEP 1: Start
+STEP 2: Declare variables of type int, float, double, char
+STEP 3: Print size of each data type using sizeof()
+STEP 4: End
+
+ASSIGNMENT 25: Maximum among three numbers using nested if-else
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input three numbers a, b, c
+STEP 3: If a > b
+  STEP 3a: If a > c, print "a is the greatest number"
+  STEP 3b: Else, print "c is the greatest number"
+STEP 4: If b > a
+  STEP 4a: If b > c, print "b is the greatest number"
+  STEP 4b: Else, print "c is the greatest number"
+STEP 5: End
+
+ASSIGNMENT 26: Simple Calculator using switch-case
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input an operator (+, -, *, /)
+STEP 3: Input two operands first and second
+STEP 4: Using switch-case:
+  - If operator is +, calculate first + second and print result
+  - If operator is -, calculate first - second and print result
+  - If operator is *, calculate first * second and print result
+  - If operator is /, check if second != 0 → calculate first / second and print result, else print "Division by zero not allowed"
+  - Default: print "Invalid operator"
+STEP 5: End
+
+ASSIGNMENT 27: Check if a letter is vowel or consonant using switch-case
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input a character ch
+STEP 3: Using switch-case:
+  - If ch is a, e, i, o, u (or uppercase), print "ch is a vowel"
+  - Default: print "ch is a consonant"
+STEP 4: End
+
+ASSIGNMENT 28: Calculate Gross Salary using if-else
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input basic salary basic
+STEP 3: If basic > 15000, calculate:
+  - hra = 0.20 * basic
+  - da = 0.05 * basic
+  - ta = 0.10 * basic
+  - gross = basic + hra + da + ta
+STEP 4: Else if basic <= 15000, calculate:
+  - da = 0.05 * basic
+  - ta = 0.10 * basic
+  - gross = basic + da + ta
+STEP 5: Print "Gross salary = gross"
+STEP 6: End
+FLOWCHART: 
+
+ASSIGNMENT 29: Electricity bill using switch-case
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input number of units consumed units
+STEP 3: Using switch-case:
+  - If units <= 100, calculate bill = units * 5 and print
+  - Else if units <= 200, calculate bill = units * 7 and print
+  - Else if units <= 1000, calculate bill = units * 10 and print
+  - Default: print "Invalid input"
+STEP 4: End
+
+ASSIGNMENT 30: Check grade of a student using switch-case
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input marks marks
+STEP 3: If marks < 0 or marks > 100, print "Invalid marks entered"
+STEP 4: Else, divide marks by 10 and use switch-case:
+  - Case 10 or 9 → If marks >= 95 → grade = "A+", else grade = "A"
+  - Case 8 → grade = "B"
+  - Case 7 → grade = "C"
+  - Default → grade = "F"
+STEP 5: Print "Your grade = grade"
+STEP 6: End
+
+ASSIGNMENT 31: Sum of N natural numbers
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input a number n
+STEP 3: Initialize sum = 0
+STEP 4: For i = 1 to n, add i to sum
+STEP 5: Print "Sum of N natural numbers = sum"
+STEP 6: End
+
+ASSIGNMENT 32: Multiplication table of any number using for loop
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input a number n
+STEP 3: For i = 1 to 10, calculate p = n * i
+STEP 4: Print "n x i = p"
+STEP 5: End
+
+ASSIGNMENT 33: Factorial of a number using for loop
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input a number n
+STEP 3: Initialize f = 1
+STEP 4: For i = 1 to n, multiply f = f * i
+STEP 5: Print "Factorial of n = f"
+STEP 6: End
+
+ASSIGNMENT 34: Fibonacci series up to N terms
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input a number n
+STEP 3: Initialize a = b = 1, c = 0
+STEP 4: For i = 0 to n, print c, then update:
+  - a = b
+  - b = c
+  - c = a + b
+STEP 5: End
+ 
+ASSIGNMENT 35: Print all prime numbers in a range
+ALGORITHM:
+STEP 1: Start
+STEP 2: Input lower limit l and upper limit h
+STEP 3: For i = l to h:
+  - Initialize c = 0
+  - For j = 1 to i:
+    - If i % j == 0, increment c
+  - If c == 2, print i (prime number)
+STEP 4: End
