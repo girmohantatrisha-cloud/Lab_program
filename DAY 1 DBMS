@@ -1,0 +1,227 @@
+DBMS LAB ASSIGNMENT - 4
+
+Q1. Create the following tables with the constraints mentioned.
+
+Answer:
+
+CREATE DATABASE Library;
+USE Library;
+
+CREATE TABLE Customer (
+    Cust_id CHAR(3) PRIMARY KEY,
+    Fname VARCHAR(20) NOT NULL,
+    Lname VARCHAR(20),
+    Area VARCHAR(10) NOT NULL,
+    Phone VARCHAR(10)
+);
+
+INSERT INTO Customer VALUES
+('A01','Ivan','Ross','SA','6125467'),
+('A02','Vandana','Ray','MU','5560379'),
+('A03','Pramada','Jauguste','DA','4560389'),
+('A04','Basu','Navindi','BA','6125401'),
+('A05','Ravi','Shridhar','NA',NULL),
+('A06','Rukmini','Aiyer','GH','5125274');
+
+CREATE TABLE Movie (
+    Mv_no INT PRIMARY KEY,
+    Cust_id CHAR(3),
+    Title VARCHAR(40) NOT NULL,
+    Star VARCHAR(2) NOT NULL,
+    Price INT CHECK (Price BETWEEN 100 AND 250),
+    FOREIGN KEY (Cust_id) REFERENCES Customer(Cust_id)
+);
+
+INSERT INTO Movie VALUES
+(1,'A02','Bloody','JC',181),
+(2,'A04','The Firm','TC',200),
+(3,'A01','Pretty Woman','RG',151),
+(4,'A06','Home Alone','MC',150),
+(5,'A05','The Fugitive','MF',200),
+(6,'A03','Coma','MD',100),
+(7,'A02','Dracula','GO',150),
+(8,'A06','Quick Change','BM',100),
+(9,'A03','Gone with the Wind','CB',200),
+(10,'A05','Carry on Doctor','LP',100);
+
+
+Q2. Prove that entity integrity constraint is ensured by both the tables. (2 conditions to be checked).
+
+Answer:
+
+SELECT * FROM Customer
+WHERE Cust_id IS NULL;
+
+SELECT Cust_id, COUNT(*)
+FROM Customer
+GROUP BY Cust_id
+HAVING COUNT(*) > 1;
+
+SELECT * FROM Movie
+WHERE Mv_no IS NULL;
+
+SELECT Mv_no, COUNT(*)
+FROM Movie
+GROUP BY Mv_no
+HAVING COUNT(*) > 1;
+
+
+Q3. Prove that referential integrity constraint is ensured by both the tables.
+
+Answer:
+
+SELECT Movie.*
+FROM Movie
+LEFT JOIN Customer
+ON Movie.Cust_id = Customer.Cust_id
+WHERE Customer.Cust_id IS NULL;
+
+
+Q4. Prove that domain integrity constraint is ensured by the Movie table.
+
+Answer:
+
+SELECT *
+FROM Movie
+WHERE Price < 100 OR Price > 250;
+
+
+Q5. Display the movie titles, whose price is greater than 100 but less than 200.
+
+Answer:
+
+SELECT Title
+FROM Movie
+WHERE Price > 100 AND Price < 200;
+
+
+Q6. Display the cust_id who have seen movies having stars as JC or TC or MC.
+
+Answer:
+
+SELECT DISTINCT Cust_id
+FROM Movie
+WHERE Star IN ('JC','TC','MC');
+
+
+Q7. Display the details of those customers who have an A in their area name.
+
+Answer:
+
+SELECT *
+FROM Customer
+WHERE Area LIKE '%A%';
+
+
+Q8. Display the movie titles, whose price is within 180 and 200 and whose titles are of exactly 6 characters.
+
+Answer:
+
+SELECT Title
+FROM Movie
+WHERE Price BETWEEN 180 AND 200
+AND CHAR_LENGTH(Title) = 6;
+
+
+Q9. Display the movie name, their original prices and the prices after 10% increment. Give alias name to the incremented price column.
+
+Answer:
+
+SELECT Title, Price,
+Price * 1.10 AS Increased_Price
+FROM Movie;
+
+
+Q10. Display all the customer details in the following way: "Ivan Ross stays in SA and his phone number is 6125467".
+
+Answer:
+
+SELECT CONCAT(Fname,' ',Lname,
+' stays in ',Area,
+' and his phone number is ',
+COALESCE(Phone,'Not Recorded')) AS Details
+FROM Customer;
+
+
+Q11. Add a NOT NULL constraint to the Lname field in Customer.
+
+Answer:
+
+ALTER TABLE Customer
+MODIFY Lname VARCHAR(20) NOT NULL;
+
+
+Q12. Display the customer name whose phone number is not recorded.
+
+Answer:
+
+SELECT Fname, Lname
+FROM Customer
+WHERE Phone IS NULL;
+
+
+Q13. Add the phone number according to your own wish for the person mentioned in problem no. 7.
+
+Answer:
+
+UPDATE Customer
+SET Phone = '9000000001'
+WHERE Cust_id = 'A05';
+
+
+Q14. Display the unique customer IDs from Movie table.
+
+Answer:
+
+SELECT DISTINCT Cust_id
+FROM Movie;
+
+
+Q15. Remove the NOT NULL constraint from Star column in Movie table.
+
+Answer:
+
+ALTER TABLE Movie
+MODIFY Star VARCHAR(2) NULL;
+
+
+Q16. Delete any row from the Customer table. If you cannot delete, then note the error message displayed.
+
+Answer:
+
+DELETE FROM Customer
+WHERE Cust_id = 'A01';
+
+Error: Cannot delete or update a parent row because a foreign key constraint fails.
+
+
+Q17. Delete any row from the Movie table. If you cannot delete, then note the error message displayed.
+
+Answer:
+
+DELETE FROM Movie
+WHERE Mv_no = 10;
+
+
+Q18. Drop the Customer table. If you cannot drop, then note the error message displayed.
+
+Answer:
+
+DROP TABLE Customer;
+
+Error: Cannot drop table 'Customer' because it is referenced by a foreign key constraint.
+
+
+Q19. Drop the Movie table. If you cannot drop, then note the error message displayed.
+
+Answer:
+
+DROP TABLE Movie;
+
+
+Q20. Drop the foreign key from Movie table.
+
+Answer:
+
+ALTER TABLE Movie
+DROP FOREIGN KEY Movie_ibfk_1;
