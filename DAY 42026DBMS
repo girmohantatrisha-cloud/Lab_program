@@ -1,0 +1,209 @@
+DBMS LAB ASSIGNMENT – 4
+
+Q1. Create the following tables with the constraints mentioned.
+
+Answer:
+
+CREATE TABLE Customer (
+    Cust_id VARCHAR2(3) PRIMARY KEY,
+    Fname VARCHAR2(15) NOT NULL,
+    Lname VARCHAR2(20) NOT NULL,
+    Area VARCHAR2(2),
+    Phone NUMBER(7)
+);
+
+CREATE TABLE Movie (
+    Mv_no NUMBER(2) PRIMARY KEY,
+    Cust_id VARCHAR2(3),
+    Title VARCHAR2(30) NOT NULL,
+    Star VARCHAR2(2) NOT NULL,
+    Price NUMBER(3),
+    FOREIGN KEY (Cust_id) REFERENCES Customer(Cust_id),
+    CHECK (Price BETWEEN 100 AND 250)
+);
+
+Q2. Prove that entity integrity constraint is ensured by both the tables. (2 conditions to be checked).
+
+Answer:
+
+-- Check 1: Primary key should not contain NULL values.
+
+SELECT * FROM Customer
+WHERE Cust_id IS NULL;
+
+SELECT * FROM Movie
+WHERE Mv_no IS NULL;
+
+-- Check 2: Primary key values should be unique.
+
+SELECT Cust_id, COUNT(*)
+FROM Customer
+GROUP BY Cust_id
+HAVING COUNT(*) > 1;
+
+SELECT Mv_no, COUNT(*)
+FROM Movie
+GROUP BY Mv_no
+HAVING COUNT(*) > 1;
+
+Q3. Prove that referential integrity constraint is ensured by both the tables.
+
+Answer:
+
+SELECT *
+FROM Movie
+WHERE Cust_id NOT IN (
+    SELECT Cust_id FROM Customer
+);
+
+Q4. Prove that domain integrity constraint is ensured by the Movie table.
+
+Answer:
+
+SELECT *
+FROM Movie
+WHERE Price NOT BETWEEN 100 AND 250;
+
+Q5. Display the movie titles whose price is greater than 100 but less than 200.
+
+Answer:
+
+SELECT Title
+FROM Movie
+WHERE Price > 100 AND Price < 200;
+
+Q6. Display the cust_id who have seen movies having stars as either JC or TC or MC.
+
+Answer:
+
+SELECT DISTINCT Cust_id
+FROM Movie
+WHERE Star IN ('JC', 'TC', 'MC');
+
+Q7. Display the details of those customers who have an A in their Area name.
+
+Answer:
+
+SELECT *
+FROM Customer
+WHERE Area LIKE '%A%';
+
+Q8. Display the movie titles whose price is within 180 and the movie titles are of exactly 6 characters.
+
+Answer:
+
+SELECT Title
+FROM Movie
+WHERE Price <= 180
+AND LENGTH(Title) = 6;
+
+Q9. Display the movie name, their original prices and the prices after 10% increment. Give alias name to the incremented price column.
+
+Answer:
+
+SELECT Title,
+       Price AS Original_Price,
+       Price + (Price * 10 / 100) AS "Incremented Price"
+FROM Movie;
+
+Q10. Display all the customer details in the following way: 'Ivan Ross stays in SA and his phone number is 6125467'.
+
+Answer:
+
+SELECT Fname || ' ' || Lname ||
+       ' stays in ' || Area ||
+       ' and his phone number is ' || Phone AS Customer_Details
+FROM Customer
+WHERE Cust_id = 'A01';
+
+Q11. Add a not null constraint to the Lname field in Customer.
+
+Answer:
+
+ALTER TABLE Customer
+MODIFY Lname VARCHAR2(20) NOT NULL;
+
+Q12. Display the customer name whose phone number is not recorded.
+
+Answer:
+
+SELECT Fname, Lname
+FROM Customer
+WHERE Phone IS NULL;
+
+Q13. Add the phone number according to your own wish for the person mentioned in problem no. 7.
+
+Answer:
+
+UPDATE Customer
+SET Phone = 7000001
+WHERE Cust_id = 'A01';
+
+UPDATE Customer
+SET Phone = 7000002
+WHERE Cust_id = 'A03';
+
+UPDATE Customer
+SET Phone = 7000003
+WHERE Cust_id = 'A04';
+
+COMMIT;
+
+Q14. Display the unique customer id's from movie table.
+
+Answer:
+
+SELECT DISTINCT Cust_id
+FROM Movie;
+
+Q15. Remove the not null constraint from Star column in Movie table.
+
+Answer:
+
+ALTER TABLE Movie
+MODIFY Star NULL;
+
+Q16. Delete any row from the Customer table. If you cannot delete, then note the error message displayed.
+
+Answer:
+
+DELETE FROM Customer
+WHERE Cust_id = 'A01';
+
+Expected Error:
+
+ORA-02292: integrity constraint violated -
+child record found
+
+Q17. Delete any row from the Movie table. If you cannot delete, then note the error message displayed.
+
+Answer:
+
+DELETE FROM Movie
+WHERE Mv_no = 10;
+
+COMMIT;
+
+Q18. Drop the Customer table. If you cannot drop, then note the error message displayed.
+
+Answer:
+
+DROP TABLE Customer;
+
+Expected Error:
+
+ORA-02449: unique/primary keys in table
+referenced by foreign keys
+
+Q19. Drop the Movie table. If you cannot drop, then note the error message displayed.
+
+Answer:
+
+DROP TABLE Movie;
+
+Q20. Drop the foreign key from Movie table.
+
+Answer:
+
+ALTER TABLE Movie
+DROP CONSTRAINT SYS_C001234;
