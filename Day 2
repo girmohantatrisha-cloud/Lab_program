@@ -1,0 +1,158 @@
+
+
+Q1. Create a table EMP1 with the following structure.
+
+Answer:
+
+CREATE TABLE EMP1 (
+    ID NUMBER(2),
+    Name VARCHAR2(10),
+    Basic NUMBER(6,2),
+    Designation VARCHAR2(10),
+    Age NUMBER(2)
+);
+
+Q2. Change the data type of the field Basic from float to integer with required size of the EMP1 table.
+
+Answer:
+
+ALTER TABLE EMP1
+MODIFY Basic NUMBER(6);
+
+Q3. Change the field size of Name column of the EMP1 table from 10 to 15.
+
+Answer:
+
+ALTER TABLE EMP1
+MODIFY Name VARCHAR2(15);
+
+Q4. Create another table EMP_trainee with the same changed structure. The column ID is to be renamed as Emp_id in the EMP_trainee table.
+
+Answer:
+
+CREATE TABLE EMP_trainee (
+    Emp_id NUMBER(2),
+    Name VARCHAR2(15),
+    Basic NUMBER(6),
+    Designation VARCHAR2(10),
+    Age NUMBER(2)
+);
+
+Q5. Insert the following data in EMP1 table:
+
+(1, Rohit, 6700, Manager, 24)
+
+(2, Sunil, 6200, Engineer, 27)
+
+(3, Payal, 6300, Engineer, 25)
+
+(4, Kunal, 6700, Trainee, 28)
+
+(5, Sunita, 6230, Trainee, 26)
+
+(6, Bimal, 7000, Trainee, 25)
+
+Answer:
+
+INSERT INTO EMP1 VALUES (1, 'Rohit', 6700, 'Manager', 24);
+
+INSERT INTO EMP1 VALUES (2, 'Sunil', 6200, 'Engineer', 27);
+
+INSERT INTO EMP1 VALUES (3, 'Payal', 6300, 'Engineer', 25);
+
+INSERT INTO EMP1 VALUES (4, 'Kunal', 6700, 'Trainee', 28);
+
+INSERT INTO EMP1 VALUES (5, 'Sunita', 6230, 'Trainee', 26);
+
+INSERT INTO EMP1 VALUES (6, 'Bimal', 7000, 'Trainee', 25);
+
+COMMIT;
+
+Q6. Insert all rows with the designation 'trainee' from the EMP1 table to EMP_trainee table.
+
+Answer:
+
+INSERT INTO EMP_trainee
+SELECT ID, Name, Basic, Designation, Age
+FROM EMP1
+WHERE Designation = 'Trainee';
+
+COMMIT;
+
+Q7. Add columns Skills (data type VARCHAR2 and size 10) and DOJ (data type DATE) to the EMP1 table and add data for the Skills and DOJ columns according to your own wish.
+
+Answer:
+
+ALTER TABLE EMP1
+ADD (
+    Skills VARCHAR2(10),
+    DOJ DATE
+);
+
+UPDATE EMP1
+SET Skills = 'SQL',
+    DOJ = TO_DATE('01-01-2024', 'DD-MM-YYYY')
+WHERE ID = 1;
+
+UPDATE EMP1
+SET Skills = 'Python',
+    DOJ = TO_DATE('02-02-2024', 'DD-MM-YYYY')
+WHERE ID = 2;
+
+UPDATE EMP1
+SET Skills = 'Java',
+    DOJ = TO_DATE('03-03-2024', 'DD-MM-YYYY')
+WHERE ID = 3;
+
+UPDATE EMP1
+SET Skills = 'C++',
+    DOJ = TO_DATE('04-04-2024', 'DD-MM-YYYY')
+WHERE ID = 4;
+
+UPDATE EMP1
+SET Skills = 'HTML',
+    DOJ = TO_DATE('05-05-2024', 'DD-MM-YYYY')
+WHERE ID = 5;
+
+UPDATE EMP1
+SET Skills = 'Oracle',
+    DOJ = TO_DATE('06-06-2024', 'DD-MM-YYYY')
+WHERE ID = 6;
+
+COMMIT;
+
+Q8. Update more than one row in one query in EMP1 table.
+
+Answer:
+
+UPDATE EMP1
+SET Basic = Basic + 500
+WHERE ID IN (1, 2, 3);
+
+COMMIT;
+
+Q9. Rename the column Age of EMP1 table to Age_in_Years.
+
+Answer:
+
+ALTER TABLE EMP1
+RENAME COLUMN Age TO Age_in_Years;
+
+Q10. Drop the Age column from the EMP_trainee table.
+
+Answer:
+
+ALTER TABLE EMP_trainee
+DROP COLUMN Age;
+
+Q11. Rename the table EMP to EMP_Mgr_Engr.
+
+Answer:
+
+RENAME EMP1 TO EMP_Mgr_Engr;
+
+Q12. Truncate EMP_Mgr_Engr table.
+
+Answer:
+
+TRUNCATE TABLE EMP_Mgr_Engr;
