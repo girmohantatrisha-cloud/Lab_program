@@ -1,0 +1,73 @@
+Answer:
+
+SELECT * FROM EMPLOYEE WHERE COMM_PCT IS NOT NULL;
+
+Q10. Display the details of those employees who do not get commission.
+
+Answer:
+
+SELECT * FROM EMPLOYEE WHERE COMM_PCT IS NULL;
+
+Q11. Display the Employee_id, Department_id and Salary of all employees whose salary is greater than 5000.
+
+Answer:
+
+SELECT EMPLOYEE_ID, DEPARTMENT_ID, SALARY FROM EMPLOYEE WHERE SALARY > 5000;
+
+Q12. Display the Last_Name and Salary of all employees whose salary is between 4000 and 7000.
+
+Answer:
+
+SELECT LAST_NAME, SALARY FROM EMPLOYEE WHERE SALARY BETWEEN 4000 AND 7000;
+
+Q13. Display the details of all employees whose salary is either 6000 or 6500 or 7000.
+
+Answer:
+
+SELECT * FROM EMPLOYEE WHERE SALARY IN (6000, 6500, 7000);
+
+Q14. Display the details of all those employees who work either in department 10 or 20 or 30 or 50.
+
+Answer:
+
+SELECT * FROM EMPLOYEE WHERE DEPARTMENT_ID IN (10, 20, 30, 50);
+
+Q15. Display the details of all employees whose salary is not equal to 5000.
+
+Answer:
+
+SELECT * FROM EMPLOYEE WHERE SALARY <> 5000;
+
+Q16. Display the details of all the CLERKS working in the organization.
+
+Answer:
+
+SELECT * FROM EMPLOYEE WHERE JOB_ID LIKE '%CLERK%';
+
+Q17. Update the job_id's of the employees who earn more than 5000 to Grade_A. Display the table EMPLOYEE after updating.
+
+Answer:
+
+UPDATE EMPLOYEE SET JOB_ID = 'Grade_A' WHERE SALARY > 5000;
+
+COMMIT;
+
+SELECT * FROM EMPLOYEE;
+
+Q18. Display the details of all those employees who are either CLERK or PROGRAMMER or ASSISTANT.
+
+Answer:
+
+SELECT * FROM EMPLOYEE WHERE JOB_ID LIKE '%CLERK%' OR JOB_ID LIKE '%PROG%' OR JOB_ID LIKE '%ASST%';
+
+Q19. Display those employees from the EMPLOYEE table whose designation is CLERK and salary is less than 3000.
+
+Answer:
+
+SELECT * FROM EMPLOYEE WHERE JOB_ID LIKE '%CLERK%' AND SALARY < 3000;
+
+Q20. Display those employees' Last_Name, Mgr_id from the EMPLOYEE table whose salary is above 3000 and work under Manager 101.
+
+Answer:
+
+SELECT LAST_NAME, MGR_ID FROM EMPLOYEE WHERE SALARY > 3000 AND MGR_ID = 101;
